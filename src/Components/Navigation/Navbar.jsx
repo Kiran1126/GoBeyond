@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Links from "./Links";
 
-const navbar = ({ links }) => {
+const Navbar = ({ links }) => {
 
   const [darkMode, setDarkMode] = useState(false)
 
@@ -34,4 +34,4 @@ const navbar = ({ links }) => {
   );
 };
 
-export default navbar;
+export default Navbar;
