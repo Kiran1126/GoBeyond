@@ -24,7 +24,7 @@ const navbar = ({ links }) => {
         }
       </ul>
       <div>
-        <button onClick={() => setDarkMode(!darkMode)}>
+        <button className="cursor-pointer" onClick={() => setDarkMode(!darkMode)}>
           <span className="material-symbols-outlined">
             {darkMode ? "sunny" : "dark_mode"}
           </span>

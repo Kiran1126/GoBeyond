@@ -1,8 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Banner from "./Components/Banner";
 import Navbar from "./Components/Navigation/Navbar";
 
 const App = () => {
+
+  const [Loading, setLoading] = useState(false);
 
     // This array of objects is used for the links given in the Navigation Panel
     const linksArr = [
