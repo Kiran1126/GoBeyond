@@ -3,14 +3,14 @@ import Links from "./Links";
 
 const Navbar = ({ links }) => {
 
-  const [darkMode, setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <section className="h-auto 100vw p-2 flex justify-around items-center bg-neutral-200">
       <div className="h-fulll w-fulll">
         <img className="h-18 w-24" src="Logo_GoBeyond.png" alt="logo" />
       </div>
-      <ul className="flex gap-5">
+      <ul className="flex gap-10">
         {
           links.map((temp, index) => (
             <li key={index}>
