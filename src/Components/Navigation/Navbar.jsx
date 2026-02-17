@@ -6,9 +6,9 @@ const Navbar = ({ links }) => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <section className="h-auto 100vw p-2 flex justify-around items-center bg-neutral-200">
+    <section className="absolute top-0 h-auto w-screen p-1 z-10 flex justify-around items-center bg-transparent">
       <div className="h-fulll w-fulll">
-        <img className="h-18 w-24" src="Logo_GoBeyond.png" alt="logo" />
+        <img className="h-16 w-20" src="Logo_GoBeyond.png" alt="logo" />
       </div>
       <ul className="flex gap-10">
         {

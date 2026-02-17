@@ -42,9 +42,9 @@ const App = () => {
     ];
 
     return (
-      <Router>
-        <Navbar links={linksArr} />
-        <div className="min-h-screen bg-gray-100">
+      <div className="overflow-x-hidden">
+        <Router>
+          <Navbar links={linksArr} />
           <Routes>
             <Route 
               path="/"
@@ -53,8 +53,8 @@ const App = () => {
               }
             />
           </Routes>
-        </div>
-      </Router> 
+        </Router> 
+      </div>
     )
   };
 
