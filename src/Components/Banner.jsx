@@ -34,7 +34,7 @@ const Banner = () => {
       <img
         src={images[current]}
         alt="slide"
-        className="h-full w-full object-cover transition-all duration-500"
+        className="h-full w-full object-cover transition-all duration-500 ease-in-out transition-opacity-0"
       />
 
       {/* Left Button */}
