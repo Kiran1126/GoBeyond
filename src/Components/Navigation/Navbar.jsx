@@ -1,3 +1,5 @@
+import GoBeyond_Dark from "./../../assets/Logo/GoBeyond_Dark.png"
+import GoBeyond_Light from "./../../assets/Logo/GoBeyond.png"
 import { useState, useEffect } from "react";
 import Links from "./Links";
 
@@ -22,7 +24,7 @@ const Navbar = ({ links }) => {
     <section className="absolute top-0 h-auto w-screen p-1 z-10 flex justify-around items-center transition-colors duration-500 ease-in-out bg-transparent text-gray-900 dark:bg-gray-900 dark:text-amber-50">
       <div className="h-fulll w-fulll">
         <img className="h-16 w-20" src = {
-          darkMode ? "GoBeyond_Dark.png" : "GoBeyond.png"
+          darkMode ? GoBeyond_Dark : GoBeyond_Light
         } alt="logo" />
       </div>
       <ul className="flex gap-10 dark:text-amber-50">

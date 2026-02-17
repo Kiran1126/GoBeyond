@@ -1,11 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Banner from "./Components/Banner";
 import Navbar from "./Components/Navigation/Navbar";
+import loader from "./assets/Sandy Loading.gif"
 
 const App = () => {
 
-  //const [Loading, setLoading] = useState(false);
+  const [Loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 3000);
+  });
 
     // This array of objects is used for the links given in the Navigation Panel
     const linksArr = [
@@ -42,18 +47,20 @@ const App = () => {
     ];
 
     return (
-      <div className="overflow-x-hidden">
-        <Router>
-          <Navbar links={linksArr} />
-          <Routes>
-            <Route 
-              path="/"
-              element={
-                <Banner />
-              }
-            />
-          </Routes>
-        </Router> 
+      <div className="overflow-x-hidden grid place-content-center h-screen w-screen">
+        {Loading ? <img src={loader} alt="Loading" /> : 
+          <Router>
+            <Navbar links={linksArr} />
+              <Routes>
+                <Route 
+                  path="/"
+                  element={
+                    <Banner />
+                  }
+                />
+              </Routes>
+            </Router> 
+          }
       </div>
     )
   };
