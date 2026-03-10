@@ -29,13 +29,19 @@ const Banner = () => {
 
   return (
     <div className="relative w-screen h-[calc(100vh-68px)] mt-[68px]">
-      
       {/* Image */}
-      <img
-        src={images[current]}
-        alt="slide"
-        className="h-full w-full object-cover transition-all duration-500 ease-in-out transition-opacity-0"
-      />
+      <div className="relative h-full w-full">
+        {images.map((img, idx) => (
+          <img 
+            key={idx}
+            src={img}
+            alt={`Slide-${idx}`}
+            className={`absolute top-0 left-0 h-full w-full object-cover transition-opacity duration-2000 ease-in-out ${
+              idx === current ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+      </div>
 
       {/* Left Button */}
       <button
